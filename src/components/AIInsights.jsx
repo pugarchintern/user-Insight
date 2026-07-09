@@ -83,6 +83,18 @@ export default function AIInsights({ report, rawActivity, simplifying, activeMod
             >
               Groq
             </button>
+            {/* 🆕 OPENROUTER BUTTON ADDED */}
+            <button
+              disabled={simplifying}
+              onClick={() => onModelChange?.("openrouter")}
+              className={`px-4 py-1.5 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-200 cursor-pointer disabled:opacity-50 ${
+                activeModel === "openrouter"
+                  ? "bg-white text-indigo-600 shadow-sm border border-slate-200/40"
+                  : "text-slate-400 hover:text-slate-600"
+              }`}
+            >
+              OpenRouter
+            </button>
           </div>
         </div>
         
